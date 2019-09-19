@@ -1,4 +1,4 @@
-package com.revature.charity.controller;
+package com.revature.charity.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
