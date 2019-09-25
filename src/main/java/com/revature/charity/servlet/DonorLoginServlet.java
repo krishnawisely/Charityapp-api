@@ -15,7 +15,7 @@ import com.revature.charity.model.Donor;
 /**
  * Servlet implementation class DonorServlet
  */
-@WebServlet("DonorLoginServlet")
+//@WebServlet("DonorLoginServlet")
 public class DonorLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
