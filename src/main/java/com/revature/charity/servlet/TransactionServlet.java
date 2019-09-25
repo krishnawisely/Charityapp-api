@@ -18,6 +18,7 @@ import com.revature.charity.service.TransactionServiceImpl;
 public class TransactionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Boolean status = false;
@@ -37,9 +38,10 @@ public class TransactionServlet extends HttpServlet {
 		transactionObj.setAmount(requestAmount);
 		status = service.transaction(transactionObj);
 
-		String json = "{\"status:\"" + "\"" + status + "\"}";
+		String json = "{\"status\"" +":"+ "\"" + status + "\"}";
 		PrintWriter out = response.getWriter();
 		out.write(json);
+		out.flush();
 	}
 
 }

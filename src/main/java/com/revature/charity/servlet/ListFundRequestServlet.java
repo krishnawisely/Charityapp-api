@@ -20,6 +20,7 @@ import com.revature.charity.service.FundRequestServiceImpl;
 public class ListFundRequestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		FundRequestService service = new FundRequestServiceImpl();
@@ -30,5 +31,6 @@ public class ListFundRequestServlet extends HttpServlet {
 
 		PrintWriter out = response.getWriter();
 		out.write(json);
+		out.flush();
 	}
 }

@@ -19,6 +19,7 @@ import com.revature.charity.service.FundRequestServiceImpl;
 public class FundRequestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Boolean isStatus = false;
@@ -45,6 +46,7 @@ public class FundRequestServlet extends HttpServlet {
 		String json = "{\"isStatus:\"" + "\"" + isStatus + "\"}";
 		PrintWriter out = response.getWriter();
 		out.write(json);
+		out.flush();
 	}
 
 }

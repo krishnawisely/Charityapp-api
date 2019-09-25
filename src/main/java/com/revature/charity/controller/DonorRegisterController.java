@@ -7,9 +7,10 @@ import com.revature.charity.exception.ServiceException;
 import com.revature.charity.model.Donor;
 import com.revature.charity.service.DonorService;
 import com.revature.charity.service.DonorServiceImpl;
+import com.revature.charity.util.Logger;
 
 public class DonorRegisterController {
-	public static String donorRegister(Donor donor) {
+	public String donorRegister(Donor donor) {
 		Boolean result = false;
 		String errorMessage = null;
 		DonorService service = new DonorServiceImpl();
@@ -23,7 +24,7 @@ public class DonorRegisterController {
 
 		if (result) {
 			json = "{\"err_msg\"" + ":" + "\"" + result + "\"}";
-		} else if (!result) {
+		} else {
 			JsonObject jsonObj = new JsonObject();
 			jsonObj.addProperty("errorMessage", errorMessage);
 			json = jsonObj.toString();
@@ -40,6 +41,6 @@ public class DonorRegisterController {
 		donor.setDate(date);
 		donor.setGender("male");
 		String json = obj.donorRegister(donor);
-		System.out.println(json);
+		Logger.debug(json);
 	}
 }

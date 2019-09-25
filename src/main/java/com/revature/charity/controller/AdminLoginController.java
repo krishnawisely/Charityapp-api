@@ -8,7 +8,7 @@ import com.revature.charity.service.AdminService;
 import com.revature.charity.service.AdminServiceImpl;
 
 public class AdminLoginController {
-	public static String adminLogin(Admin admin) {
+	public String adminLogin(Admin admin) {
 		String errorMsg = null;
 		AdminService service = new AdminServiceImpl();
 		Admin adminObj = null;
@@ -22,7 +22,7 @@ public class AdminLoginController {
 		Gson gson = new Gson();
 		if (adminObj != null) {
 			json = gson.toJson(adminObj);
-		} else if (adminObj == null) {
+		} else {
 			JsonObject jsonObj = new JsonObject();
 			jsonObj.addProperty("errorMessage", errorMsg);
 			json = jsonObj.toString();

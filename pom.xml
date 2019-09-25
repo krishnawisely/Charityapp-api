@@ -11,8 +11,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.revature</groupId>
-			<artifactId>CharityApp</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+		  	<artifactId>CharityApp</artifactId>
+		  	<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
