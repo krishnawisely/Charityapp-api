@@ -17,9 +17,9 @@ import com.revature.charity.model.Donor;
  */
 public class DonorRegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
@@ -32,10 +32,10 @@ public class DonorRegisterServlet extends HttpServlet {
 		donor.setPassword(password);
 		donor.setDateOfBirth(dateOfBirth);
 		donor.setGender(gender);
-		
+
 		String json = DonorRegisterController.donorRegister(donor);
-			PrintWriter out = response.getWriter();
-			out.write(json);	
+		PrintWriter out = response.getWriter();
+		out.write(json);
 	}
 
 }

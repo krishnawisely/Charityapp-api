@@ -24,17 +24,17 @@ public class FundRequestServlet extends HttpServlet {
 		Boolean isStatus = false;
 		FundRequestService service = new FundRequestServiceImpl();
 		FundRequest fundRequest = new FundRequest();
-		
+
 		String adminId = request.getParameter("id");
 		Integer id = Integer.parseInt(adminId);
-		
+
 		String requestType = request.getParameter("requestType");
 		String description = request.getParameter("description");
 		String targetAmount = request.getParameter("amount");
 		Double amount = Double.parseDouble(targetAmount);
 		String expireDate = request.getParameter("date");
 		LocalDate date = LocalDate.parse(expireDate);
-		
+
 		fundRequest.setAdminId(id);
 		fundRequest.setRequestType(requestType);
 		fundRequest.setDescription(description);
