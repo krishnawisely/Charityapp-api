@@ -14,7 +14,6 @@ import com.revature.charity.model.Admin;
 /**
  * Servlet implementation class AdminLoginServlet
  */
-//@WebServlet("/AdminLoginServlet")
 public class AdminLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

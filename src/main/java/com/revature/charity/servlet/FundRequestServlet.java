@@ -43,7 +43,7 @@ public class FundRequestServlet extends HttpServlet {
 		fundRequest.setExpireDate(date);
 		isStatus = service.fundRequestService(fundRequest);
 
-		String json = "{\"isStatus:\"" + "\"" + isStatus + "\"}";
+		String json = "{\"isStatus\"" +":"+"\"" + isStatus + "\"}";
 		PrintWriter out = response.getWriter();
 		out.write(json);
 		out.flush();
