@@ -44,7 +44,19 @@
   	<servlet-name>DonorRegisterServletSpring</servlet-name>
   	<display-name>DonorRegisterServletSpring</display-name>
   	<description></description>
-  	<servlet-class>com.revature.CharityAppapi.servlet.DonorRegisterServlet</servlet-class>
+  	<servlet-class>com.revature.charity.servlet.DonorRegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ListDonorServlet</servlet-name>
+  	<display-name>ListDonorServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.charity.servlet.ListDonorServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateFundRequestServlet</servlet-name>
+  	<display-name>UpdateFundRequestServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.charity.servlet.UpdateFundRequestServlet</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>DonorLoginServlet</servlet-name>
@@ -73,5 +85,13 @@
   <servlet-mapping>
   	<servlet-name>DonorRegisterServletSpring</servlet-name>
   	<url-pattern>/DonorRegisterServletSpring</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ListDonorServlet</servlet-name>
+  	<url-pattern>/ListDonorServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateFundRequestServlet</servlet-name>
+  	<url-pattern>/UpdateFundRequestServlet</url-pattern>
   </servlet-mapping>
 </web-app>
