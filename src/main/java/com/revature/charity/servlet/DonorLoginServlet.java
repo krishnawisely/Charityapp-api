@@ -20,6 +20,7 @@ public class DonorLoginServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		Donor donor = new Donor();
 		DonorLoginController loginController = new DonorLoginController();
 		String email = request.getParameter("email");
@@ -32,6 +33,7 @@ public class DonorLoginServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.write(json);
 		out.flush();
+		
 	}
 
 }

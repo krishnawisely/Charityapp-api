@@ -17,7 +17,7 @@ import com.revature.charity.model.FundRequest;
  */
 public class UpdateFundRequestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		UpdateFundRequestController updateFundControl = new UpdateFundRequestController();
 		FundRequest fundRequest = new FundRequest();
@@ -26,7 +26,7 @@ public class UpdateFundRequestServlet extends HttpServlet {
 		String requestType = request.getParameter("requestType");
 		String description = request.getParameter("description");
 		String amount = request.getParameter("amount");
-		String expireDate = request.getParameter("epireDate");
+		String expireDate = request.getParameter("expireDate");
 		
 		Integer id = Integer.parseInt(requestId);
 		Double fundAmount = Double.parseDouble(amount);

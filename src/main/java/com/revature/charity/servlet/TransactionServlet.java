@@ -8,9 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.revature.charity.controller.TransactionController;
 import com.revature.charity.model.Transaction;
-import com.revature.charity.service.TransactionService;
-import com.revature.charity.service.TransactionServiceImpl;
 
 /**
  * Servlet implementation class TransactionServlet
@@ -21,9 +20,8 @@ public class TransactionServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		Boolean status = false;
-		TransactionService service = new TransactionServiceImpl();
 		Transaction transactionObj = new Transaction();
+		TransactionController controllerObj = new TransactionController();
 		String donorId = request.getParameter("id");
 		Integer id = Integer.parseInt(donorId);
 
@@ -36,9 +34,9 @@ public class TransactionServlet extends HttpServlet {
 		transactionObj.setDonorId(id);
 		transactionObj.setfundRequestId(fundId);
 		transactionObj.setAmount(requestAmount);
-		status = service.transaction(transactionObj);
-
-		String json = "{\"status\"" +":"+ "\"" + status + "\"}";
+		
+		String json = controllerObj.transaction(transactionObj);
+		
 		PrintWriter out = response.getWriter();
 		out.write(json);
 		out.flush();

@@ -21,16 +21,18 @@ public class AdminLoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		Admin admin = new Admin();
-		AdminLoginController loginController = new AdminLoginController();
-		String email = request.getParameter("email");
-		String password = request.getParameter("password");
-		admin.setEmail(email);
-		admin.setPassword(password);
-		String json = loginController.adminLogin(admin);
-		PrintWriter out = response.getWriter();
-		out.write(json);
-		out.flush();
+		
+			Admin admin = new Admin();
+			AdminLoginController loginController = new AdminLoginController();
+			String email = request.getParameter("email");
+			String password = request.getParameter("password");
+			admin.setEmail(email);
+			admin.setPassword(password);
+			String json = loginController.adminLogin(admin);
+			PrintWriter out = response.getWriter();
+			out.write(json);
+			out.flush();
+		
 	}
 
 }
