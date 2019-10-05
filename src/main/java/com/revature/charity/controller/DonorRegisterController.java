@@ -23,7 +23,9 @@ public class DonorRegisterController {
 		String json = null;
 
 		if (result) {
-			json = "{\"err_msg\":\"" + result + "\"}";
+			JsonObject jsonObj = new JsonObject();
+			jsonObj.addProperty("isStatus", result);
+			json = jsonObj.toString();
 		} else {
 			JsonObject jsonObj = new JsonObject();
 			jsonObj.addProperty("errorMessage", errorMessage);

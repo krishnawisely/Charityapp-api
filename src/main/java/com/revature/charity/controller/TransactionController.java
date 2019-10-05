@@ -1,5 +1,6 @@
 package com.revature.charity.controller;
 
+import com.google.gson.JsonObject;
 import com.revature.charity.model.Transaction;
 import com.revature.charity.service.TransactionService;
 import com.revature.charity.service.TransactionServiceImpl;
@@ -11,7 +12,11 @@ public class TransactionController {
 		TransactionService service = new TransactionServiceImpl();
 	
 			Boolean status = service.transaction(transactionObj);
-			String json = "{\"status\"" +":"+ "\"" + status + "\"}";
+			String json = null;
+//			String json = "{\"status\"" +":"+ "\"" + status + "\"}";
+			JsonObject jsonObj = new JsonObject();
+			jsonObj.addProperty("status", status);
+			json = jsonObj.toString();
 		
 		return json;
 	}
