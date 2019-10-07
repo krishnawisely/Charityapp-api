@@ -13,7 +13,6 @@ public class TransactionController {
 	
 			Boolean status = service.transaction(transactionObj);
 			String json = null;
-//			String json = "{\"status\"" +":"+ "\"" + status + "\"}";
 			JsonObject jsonObj = new JsonObject();
 			jsonObj.addProperty("status", status);
 			json = jsonObj.toString();

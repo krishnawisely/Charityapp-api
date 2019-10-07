@@ -15,13 +15,11 @@ public class UpdateFundRequestController {
 		 
 		 String json = null;
 		 JsonObject jsonObj = new JsonObject();
-		 if(isFundUpdated)
+		 if(Boolean.TRUE.equals(isFundUpdated))
 		 {
-//			 json = "{\"isFundUpdated\":\""+isFundUpdated+"\"}";
 			 jsonObj.addProperty("isFundUpdated", isFundUpdated);
 			 json = jsonObj.toString();
 		 } else {
-//			 json = "{\"isFundUpdated\":\""+isFundUpdated+"\"}";
 			 jsonObj.addProperty("isFundUpdated", isFundUpdated);
 			 json = jsonObj.toString();
 		 }

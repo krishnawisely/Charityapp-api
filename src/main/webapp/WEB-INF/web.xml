@@ -58,6 +58,12 @@
   	<description></description>
   	<servlet-class>com.revature.charity.servlet.UpdateFundRequestServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ListFundedDonorServlet</servlet-name>
+  	<display-name>ListFundedDonorServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.charity.servlet.ListFundedDonorServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>DonorLoginServlet</servlet-name>
   	<url-pattern>/DonorLoginServlet</url-pattern>
@@ -93,5 +99,9 @@
   <servlet-mapping>
   	<servlet-name>UpdateFundRequestServlet</servlet-name>
   	<url-pattern>/UpdateFundRequestServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ListFundedDonorServlet</servlet-name>
+  	<url-pattern>/ListFundedDonorServlet</url-pattern>
   </servlet-mapping>
 </web-app>
